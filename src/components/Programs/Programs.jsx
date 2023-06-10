@@ -14,8 +14,8 @@ export const Programs = () => {
             </div>
 
             <div className='programs-categories'>
-                {programsData.map((programData) => (
-                    <div className='category'>
+                {programsData.map((programData, i) => (
+                    <div className='category' key={i}>
                         {programData.image}
                         <span>{programData.heading}</span>
                         <span>{programData.details}</span>

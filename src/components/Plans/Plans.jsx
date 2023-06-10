@@ -6,6 +6,8 @@ import './Plans.css'
 export const Plans = () => {
     return (
         <div className='plans-container'>
+            <div className='blur plans-blur-1'></div>
+            <div className='blur plans-blur-2'></div>
             <div className='programs-header' style={{gap: '2rem'}}>
                 <span className='stroke-text'>READY TO START</span>
                 <span>YOUR JOURNEY</span>
@@ -20,10 +22,10 @@ export const Plans = () => {
                                 {plan.icon}
                                 <span>{plan.name}</span>
                                 <span>$ {plan.price}</span>
-                                <div className='features'>
+                                <div className='features' key={i}>
                                     {plan.features.map((feature, i) => {
                                         return (
-                                            <div className='feature'>
+                                            <div className='feature' key={i}>
                                                 <img src={whiteTick} alt=''/>
                                                 <span key={i}>{feature}</span>
                                             </div>
@@ -31,7 +33,7 @@ export const Plans = () => {
                                     })}
                                 </div>
 
-                                <div><span>See more benefits -></span></div>
+                                <div><span>See more benefits -&gt;</span></div>
                                 <button className='btn'>Join now</button>
                             </div>
                         )

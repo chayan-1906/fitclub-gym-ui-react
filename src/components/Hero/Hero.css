@@ -162,7 +162,7 @@
     width: 10rem;
     position: absolute;
     top: 32rem;
-    right: 28rem;
+    right: 27rem;
 }
 
 .calories > img {
@@ -177,4 +177,16 @@
 
 .calories > div > :nth-child(1) {
     color: var(--gray);
+    /*color: var(--orange);*/
+}
+
+.calories > div > :nth-child(2) {
+    color: var(--lightgray);
+    font-weight: 600;
+}
+
+.hero-blur {
+    width: 22rem;
+    height: 30rem;
+    left: 0;
 }
