@@ -6,19 +6,22 @@ import hero_image from '/src/assets/hero_image.png'
 import hero_image_back from '/src/assets/hero_image_back.png'
 import calories from '/src/assets/calories.png'
 import {motion} from "framer-motion";
+import NumberCounter from 'number-counter'
+
 
 export const Hero = () => {
     const transition = {type: 'spring', duration: 3}
+    const mobile = window.innerWidth <= 768
 
     return (
-        <div className='hero'>
+        <div className='hero' id='home'>
             <div className='blur hero-blur'></div>
             <div className='left-h'>
                 <Header/>
                 {/* the best ad */}
                 <div className='the-best-ad'>
                     <motion.div
-                        initial={{left: '238px'}}
+                        initial={{left: mobile ? "178px" : '238px'}}
                         whileInView={{left: '8px'}}
                         transition={{...transition, type: 'tween'}}/>
                     <span>the best fitness club in the town</span>
@@ -41,15 +44,15 @@ export const Hero = () => {
                 {/* figures */}
                 <div className='figures'>
                     <div>
-                        <span>+140</span>
+                        <span><NumberCounter start={100} end={140} delay='4' preFix="+"/></span>
                         <span>expert coaches</span>
                     </div>
                     <div>
-                        <span>+978</span>
+                        <span><NumberCounter start={800} end={978} delay='4' preFix="+"/></span>
                         <span>members joined</span>
                     </div>
                     <div>
-                        <span>+50</span>
+                        <span><NumberCounter start={0} end={50} delay='4' preFix="+"/></span>
                         <span>fitness programs</span>
                     </div>
                 </div>
@@ -59,7 +62,6 @@ export const Hero = () => {
                     <buttons className='btn'>Get Started</buttons>
                     <buttons className='btn'>Learn More</buttons>
                 </div>
-
             </div>
 
             <div className='right-h'>
