@@ -2,7 +2,7 @@
 
 ### [Live Site (Netlify)](https://fitclub-gym-ui.netlify.app/)
 
-### [Live Site (Cloudfare)](https://fitclub-gym-5q5.pages.dev/)
+### [Live Site (Cloudflare)](https://fitclub-gym-5q5.pages.dev/)
 
 ## Available Scripts
 
